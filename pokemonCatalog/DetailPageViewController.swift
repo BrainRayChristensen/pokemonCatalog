@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DetailPageViewController.swift
 //  pokemonCatalog
 //
 //  Created by Brian Christensen on 11/28/18.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DetailPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
-
 }
-
