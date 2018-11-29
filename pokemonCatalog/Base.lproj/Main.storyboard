@@ -100,6 +100,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Tb-3c-yR1"/>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="9QO-Fe-NvJ" id="7pT-j8-uZV"/>
+                        <outlet property="nameLabel" destination="TSZ-ZG-38b" id="0xO-RL-Q4a"/>
+                        <outlet property="weightLabel" destination="vMa-nb-Xod" id="ns1-yV-pk0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9JJ-EO-GxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
