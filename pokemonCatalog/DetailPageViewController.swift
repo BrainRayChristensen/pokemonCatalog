@@ -10,6 +10,8 @@ import UIKit
 
 class DetailPageViewController: UIViewController {
 
+    var url: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
