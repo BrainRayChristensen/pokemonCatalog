@@ -8,6 +8,7 @@
 
 import UIKit
 
+//used to decode the Json object ffrom the api
 struct Info: Decodable {
     let results: [Pokemon]
 }
@@ -20,7 +21,7 @@ class MainScreenTableView: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         let urlString : String = "https://pokeapi.co/api/v2/pokemon/"
         guard let url = URL(string: urlString) else { return }
         
@@ -68,14 +69,14 @@ class MainScreenTableView: UITableViewController {
     
     //functionallity for clicking on a pokemon "row"
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //get the right info
+        //get the right info from the clicked on row for the segue
         selectedPokemonUrl = pokemonArray[indexPath.row].url
         //segue
         performSegue(withIdentifier: "segue", sender: self)
     }
     
+    //prepares for segue... aka, passes info into the next created view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        var destVC : DetailPage
         if segue.identifier == "segue"{
             let destVC = segue.destination as! DetailPageViewController
             destVC.url = selectedPokemonUrl

@@ -30,8 +30,8 @@ class DetailPageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    fileprivate func getJsonData(_ url: URL) {
-        //pull the information from website and parse the json
+    //pull the information from website and parse the json
+    private func getJsonData(_ url: URL) {
         URLSession.shared.dataTask(with: url) { (data, res, err) in
             guard let data = data else { return }
             
@@ -52,7 +52,7 @@ class DetailPageViewController: UIViewController {
             }.resume()
     }
     
-    fileprivate func refreshViewAfterJSONReceiced(){
+    private func refreshViewAfterJSONReceiced(){
         DispatchQueue.main.async {
             self.nameLabel.text = self.name
             self.weightLabel.text = "Weight: " + "\(String(describing: self.weight))"
